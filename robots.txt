@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (will be created after all pages are done)
+Sitemap: https://www.bargheergeophysics.com/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1
