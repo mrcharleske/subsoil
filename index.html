@@ -3,8 +3,8 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bargheer Geophysics - Professional geophysical surveys worldwide. Specialists in DCIP, TTEM, seismics, groundwater mapping, and mineral exploration.">
-  <meta name="keywords" content="geophysics, geophysical surveys, DCIP, TTEM, seismics, groundwater mapping, mineral exploration, arctic geophysics">
+  <meta name="description" content="Bargheer Geophysics - Professional geophysical surveys worldwide. Specialists in DCIP, TEM, seismics, groundwater mapping, and mineral exploration.">
+  <meta name="keywords" content="geophysics, geophysical surveys, DCIP, TEM, seismics, groundwater mapping, mineral exploration, arctic geophysics">
   <meta name="author" content="Bargheer Geophysics">
   <meta name="theme-color" content="#2c3e50">
   <link rel="manifest" href="/manifest.json">
@@ -100,6 +100,10 @@
       align-items: center;
     }
     
+    .nav-links li {
+      position: relative;
+    }
+    
     .nav-links a {
       color: white;
       text-decoration: none;
@@ -126,6 +130,43 @@
     
     .nav-links a:hover {
       color: #e74c3c;
+    }
+    
+    /* Dropdown Menu Styles */
+    .nav-item-dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 280px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      padding: 1rem 0;
+      margin-top: 1rem;
+      display: none;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 1001;
+    }
+    
+    .dropdown-item {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    
+    .dropdown-item:hover {
+      background: #f8f9fa;
+      color: #e74c3c;
+      padding-left: 2rem;
     }
     
     .mobile-menu-toggle {
@@ -159,6 +200,7 @@
       transition: right 0.3s ease;
       padding: 6rem 2rem 2rem;
       box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+      overflow-y: auto;
     }
     
     .mobile-menu.active {
@@ -169,19 +211,69 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 0;
+    }
+    
+    .mobile-menu > ul > li {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 0.5rem 0;
     }
     
     .mobile-menu a {
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 500;
       transition: color 0.3s ease;
+      display: block;
+      padding: 0.5rem 0;
     }
     
     .mobile-menu a:hover {
       color: #e74c3c;
+    }
+    
+    .mobile-nav-parent {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .mobile-nav-parent::after {
+      content: '▼';
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .mobile-nav-parent.active::after {
+      transform: rotate(180deg);
+    }
+    
+    .mobile-submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding-left: 1rem;
+    }
+    
+    .mobile-submenu.active {
+      max-height: 500px;
+      margin-top: 0.5rem;
+    }
+    
+    .mobile-submenu li {
+      border: none !important;
+      padding: 0.25rem 0 !important;
+    }
+    
+    .mobile-submenu a {
+      font-size: 1rem;
+      padding: 0.4rem 0;
     }
     
     .menu-overlay {
@@ -243,7 +335,7 @@
       position: relative;
       display: block;
       width: calc(100% + 1.3px);
-      height: 120px;
+      height: 150px;
     }
     
     .hero-wave .shape-fill {
@@ -325,7 +417,7 @@
     }
     
     /* ============================================
-       CONTENT SECTIONS
+       CONTENT SECTIONS WITH CURVES
     ============================================ */
     
     .content-section {
@@ -338,6 +430,30 @@
       background: #f8f9fa;
     }
     
+    /* Curved divider at top of gray sections */
+    .content-section.gray-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: white;
+      clip-path: ellipse(50% 100% at 50% 0%);
+    }
+    
+    /* Curved divider at bottom of gray sections */
+    .content-section.gray-bg::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: white;
+      clip-path: ellipse(50% 100% at 50% 100%);
+    }
+    
     .section-container {
       max-width: 1400px;
       margin: 0 auto;
@@ -345,6 +461,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
     
     .section-container.reverse {
@@ -392,19 +510,46 @@
     }
     
     /* ============================================
-       SURVEY CARDS SECTION
+       SURVEY CARDS SECTION WITH CURVES
     ============================================ */
     
     .survey-section {
-      padding: 7rem 2rem;
+      padding: 8rem 2rem;
       background: #2c3e50;
       color: white;
       position: relative;
+      margin-top: -1px;
+    }
+    
+    /* Top wave curve */
+    .survey-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: white;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+    
+    /* Bottom wave curve */
+    .survey-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: #f8f9fa;
+      clip-path: polygon(0 50%, 50% 0, 100% 50%, 100% 100%, 0 100%);
     }
     
     .survey-container {
       max-width: 1400px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
     
     .survey-header {
@@ -499,11 +644,14 @@
       padding: 7rem 2rem;
       background: #f8f9fa;
       position: relative;
+      margin-top: -1px;
     }
     
     .about-container {
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
     
     .about-header {
@@ -553,17 +701,33 @@
     }
     
     /* ============================================
-       WHY CHOOSE US SECTION
+       WHY CHOOSE US SECTION WITH CURVES
     ============================================ */
     
     .why-choose-section {
       padding: 7rem 2rem;
       background: white;
+      position: relative;
+      margin-top: -1px;
+    }
+    
+    /* Top curve */
+    .why-choose-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: #f8f9fa;
+      clip-path: ellipse(60% 100% at 50% 0%);
     }
     
     .why-choose-container {
       max-width: 1400px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
     
     .why-choose-header {
@@ -633,11 +797,27 @@
     .clients-section {
       padding: 6rem 2rem;
       background: #f8f9fa;
+      position: relative;
+      margin-top: -1px;
+    }
+    
+    /* Top curve */
+    .clients-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: white;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%, 0 100%);
     }
     
     .clients-container {
       max-width: 1400px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
     
     .clients-header {
@@ -675,35 +855,26 @@
     }
     
     /* ============================================
-       FOOTER
+       FOOTER WITH CURVES
     ============================================ */
     
     footer {
       background: #2c3e50;
       color: white;
       position: relative;
-      padding: 5rem 2rem 2rem;
+      padding: 6rem 2rem 2rem;
+      margin-top: -1px;
     }
     
+    /* Top wave curve */
     .footer-wave {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      transform: rotate(180deg);
-    }
-    
-    .footer-wave svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 100px;
-    }
-    
-    .footer-wave .shape-fill {
-      fill: #f8f9fa;
+      height: 120px;
+      background: #f8f9fa;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%, 0 100%);
     }
     
     .footer-container {
@@ -713,6 +884,8 @@
       grid-template-columns: 2fr 1fr 1fr 1.5fr;
       gap: 4rem;
       margin-bottom: 3rem;
+      position: relative;
+      z-index: 2;
     }
     
     .footer-section h3 {
@@ -768,6 +941,8 @@
       border-top: 1px solid rgba(255,255,255,0.2);
       color: rgba(255,255,255,0.7);
       font-size: 0.95rem;
+      position: relative;
+      z-index: 2;
     }
     
     /* ============================================
@@ -892,7 +1067,7 @@
       }
       
       .survey-section {
-        padding: 4rem 1.5rem;
+        padding: 5rem 1.5rem;
       }
       
       .about-content {
@@ -975,10 +1150,7 @@
    </div>
   </section><!-- Footer -->
   <footer><!-- Curved Wave Top -->
-   <div class="footer-wave">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 120" preserveaspectratio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-   </div>
+   <div class="footer-wave"></div>
    <div class="footer-container" id="footer-container"><!-- Loaded dynamically -->
    </div>
    <div class="footer-bottom">
@@ -988,5 +1160,5 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><!-- App JavaScript (Loads Content) -->
   <script src="app.js"></script><!-- Main JavaScript (Menu, Scroll Effects) -->
   <script src="main.js"></script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af57a2570e9b0f0',t:'MTc2NTk2NDYxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af5d30e874cb0f0',t:'MTc2NTk2ODI1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ </html>
