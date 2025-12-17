@@ -157,7 +157,6 @@
       "links": [
         {"name": "About Us", "url": "about.html"},
         {"name": "Geophysics Software", "url": "geophysics-software.html"},
-        {"name": "IP Processing", "url": "ip-processing.html"},
         {"name": "Contact", "url": "contact.html"}
       ]
     },
@@ -170,3 +169,4 @@
     "copyright": "© 2024 Bargheer Geophysics. All rights reserved."
   }
 }
+
