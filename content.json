@@ -7,8 +7,29 @@
   },
   "navigation": [
     {"name": "Home", "url": "index.html"},
-    {"name": "Geophysical Surveys", "url": "geophysical-surveys.html"},
-    {"name": "Software", "url": "geophysics-software.html"},
+    {
+      "name": "Geophysical Surveys", 
+      "url": "geophysical-surveys.html",
+      "hasDropdown": true,
+      "subpages": [
+        {"name": "DCIP", "url": "dcip.html"},
+        {"name": "TEM", "url": "tem.html"},
+        {"name": "Seismics", "url": "seismics.html"},
+        {"name": "GCM", "url": "gcm.html"},
+        {"name": "Gravimetrics", "url": "gravimetrics.html"},
+        {"name": "Magnetics", "url": "magnetics.html"},
+        {"name": "MRS", "url": "mrs.html"},
+        {"name": "Methods & Techniques: Overview", "url": "methods-overview.html"}
+      ]
+    },
+    {
+      "name": "Geophysics Software",
+      "url": "geophysics-software.html",
+      "hasDropdown": true,
+      "subpages": [
+        {"name": "IP Processing", "url": "ip-processing.html"}
+      ]
+    },
     {"name": "About", "url": "about.html"},
     {"name": "Contact", "url": "contact.html"}
   ],
@@ -53,13 +74,13 @@
     "subtitle": "Explore our range of specialized geophysical techniques",
     "methods": [
       {"name": "DCIP", "icon": "⚡", "url": "dcip.html"},
-      {"name": "TTEM", "icon": "📡", "url": "ttem.html"},
+      {"name": "TEM", "icon": "📡", "url": "tem.html"},
       {"name": "Seismics", "icon": "🌊", "url": "seismics.html"},
-      {"name": "GSM", "icon": "🗺️", "url": "gsm.html"},
+      {"name": "GCM", "icon": "🗺️", "url": "gcm.html"},
       {"name": "Gravimetrics", "icon": "⚖️", "url": "gravimetrics.html"},
       {"name": "Magnetics", "icon": "🧲", "url": "magnetics.html"},
       {"name": "MRS", "icon": "💧", "url": "mrs.html"},
-      {"name": "Methods & Techniques", "icon": "📋", "url": "methods-overview.html"}
+      {"name": "Methods & Techniques: Overview", "icon": "📋", "url": "methods-overview.html"}
     ]
   },
   "about": {
@@ -122,24 +143,29 @@
       "title": "Services",
       "links": [
         {"name": "DCIP", "url": "dcip.html"},
-        {"name": "TTEM", "url": "ttem.html"},
+        {"name": "TEM", "url": "tem.html"},
         {"name": "Seismics", "url": "seismics.html"},
+        {"name": "GCM", "url": "gcm.html"},
         {"name": "Gravimetrics", "url": "gravimetrics.html"},
-        {"name": "Magnetics", "url": "magnetics.html"}
+        {"name": "Magnetics", "url": "magnetics.html"},
+        {"name": "MRS", "url": "mrs.html"},
+        {"name": "Methods & Techniques: Overview", "url": "methods-overview.html"}
       ]
     },
     "company_links": {
       "title": "Company",
       "links": [
         {"name": "About Us", "url": "about.html"},
-        {"name": "Software", "url": "geophysics-software.html"},
+        {"name": "Geophysics Software", "url": "geophysics-software.html"},
+        {"name": "IP Processing", "url": "ip-processing.html"},
         {"name": "Contact", "url": "contact.html"}
       ]
     },
     "contact": {
       "title": "Contact",
       "email": "info@bargheergeophysics.com",
-      "tagline": "We work anywhere in the world"
+      "tagline": "We work anywhere in the world",
+      "instagram": "https://www.instagram.com/bargheergeophysics"
     },
     "copyright": "© 2024 Bargheer Geophysics. All rights reserved."
   }
