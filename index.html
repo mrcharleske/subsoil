@@ -6,11 +6,10 @@
   <meta name="description" content="Bargheer Geophysics - Professional geophysical surveys worldwide. Specialists in DCIP, TTEM, seismics, groundwater mapping, and mineral exploration. Expert in arctic conditions and remote locations.">
   <meta name="keywords" content="geophysics, geophysical surveys, DCIP, TTEM, seismics, groundwater mapping, mineral exploration, arctic geophysics, Bargheer">
   <meta name="author" content="Bargheer Geophysics">
-  <meta name="theme-color" content="#2c3e50"><!-- Open Graph / Social Media -->
+  <meta name="theme-color" content="#0d6efd"><!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bargheer Geophysics - Geologists, Geophysicists and Field Specialists">
-  <meta property="og:description" content="Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.">
-  <meta property="og:image" content="/images/og-image.jpg"><!-- PWA -->
+  <meta property="og:description" content="Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations."><!-- PWA -->
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
@@ -29,9 +28,10 @@
     
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-      color: #1e293b;
+      color: #343a40;
       line-height: 1.6;
       overflow-x: hidden;
+      background: #ffffff;
     }
     
     html {
@@ -47,22 +47,21 @@
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(44, 62, 80, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(10px);
       z-index: 1000;
       transition: all 0.3s ease;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
     }
     
     nav.scrolled {
-      background: rgba(44, 62, 80, 1);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.12);
     }
     
     .nav-container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 1.2rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -77,8 +76,8 @@
     .logo {
       width: 50px;
       height: 50px;
-      background: #e74c3c;
-      border-radius: 8px;
+      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -86,28 +85,30 @@
       color: white;
       font-size: 1.5rem;
       font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
     }
     
     .company-name {
       font-size: 1.3rem;
       font-weight: 700;
-      color: white;
+      color: #0d6efd;
       font-family: 'Poppins', sans-serif;
     }
     
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       list-style: none;
       align-items: center;
     }
     
     .nav-links a {
-      color: white;
+      color: #343a40;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
       position: relative;
+      font-size: 1rem;
     }
     
     .nav-links a::after {
@@ -117,7 +118,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: #e74c3c;
+      background: #0d6efd;
       transition: width 0.3s ease;
     }
     
@@ -126,7 +127,7 @@
     }
     
     .nav-links a:hover {
-      color: #e74c3c;
+      color: #0d6efd;
     }
     
     .mobile-menu-toggle {
@@ -142,7 +143,7 @@
     .mobile-menu-toggle span {
       width: 30px;
       height: 3px;
-      background: white;
+      background: #0d6efd;
       border-radius: 2px;
       transition: all 0.3s ease;
     }
@@ -154,11 +155,12 @@
       right: -100%;
       width: 80%;
       max-width: 400px;
-      height: 100vh;
-      background: #2c3e50;
+      height: 100%;
+      background: white;
       z-index: 1001;
       transition: right 0.3s ease;
       padding: 6rem 2rem 2rem;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.1);
     }
     
     .mobile-menu.active {
@@ -173,7 +175,7 @@
     }
     
     .mobile-menu a {
-      color: white;
+      color: #343a40;
       text-decoration: none;
       font-size: 1.2rem;
       font-weight: 500;
@@ -181,7 +183,7 @@
     }
     
     .mobile-menu a:hover {
-      color: #e74c3c;
+      color: #0d6efd;
     }
     
     .menu-overlay {
@@ -190,8 +192,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
-      background: rgba(0,0,0,0.7);
+      height: 100%;
+      background: rgba(0,0,0,0.5);
       z-index: 999;
       opacity: 0;
       transition: opacity 0.3s ease;
@@ -202,36 +204,54 @@
     }
     
     /* ============================================
-       HERO SECTION
+       HERO SECTION - MODERN CURVED DESIGN
     ============================================ */
     
     .hero-section {
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 50%, #198754 100%);
       overflow: hidden;
+      padding-top: 80px;
     }
     
-    .hero-video {
+    /* Geometric Pattern Overlay */
+    .hero-section::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
       z-index: 1;
     }
     
-    .hero-overlay {
+    /* Curved Wave Bottom */
+    .hero-wave {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.75));
+      overflow: hidden;
+      line-height: 0;
       z-index: 2;
+    }
+    
+    .hero-wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 120px;
+    }
+    
+    .hero-wave .shape-fill {
+      fill: #ffffff;
     }
     
     .hero-content {
@@ -239,27 +259,29 @@
       z-index: 3;
       text-align: center;
       color: white;
-      max-width: 1000px;
+      max-width: 1100px;
       padding: 2rem;
+      margin-bottom: 100px;
     }
     
     .hero-content h1 {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       font-weight: 800;
       font-family: 'Poppins', sans-serif;
       margin-bottom: 1.5rem;
       line-height: 1.2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     
     .hero-content p {
       font-size: 1.3rem;
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
+      line-height: 1.9;
+      margin-bottom: 3rem;
       font-weight: 300;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
     
     .hero-cta {
@@ -270,7 +292,7 @@
     }
     
     .cta-button {
-      padding: 1rem 2.5rem;
+      padding: 1.1rem 3rem;
       font-size: 1.1rem;
       font-weight: 600;
       border: none;
@@ -279,18 +301,18 @@
       transition: all 0.3s ease;
       text-decoration: none;
       display: inline-block;
+      font-family: 'Inter', sans-serif;
     }
     
     .cta-primary {
-      background: #e74c3c;
-      color: white;
-      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+      background: white;
+      color: #0d6efd;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
     
     .cta-primary:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
     }
     
     .cta-secondary {
@@ -301,20 +323,39 @@
     
     .cta-secondary:hover {
       background: white;
-      color: #2c3e50;
-      transform: translateY(-2px);
+      color: #0d6efd;
+      transform: translateY(-3px);
     }
     
     /* ============================================
-       CONTENT SECTIONS
+       CONTENT SECTIONS WITH CURVES
     ============================================ */
     
     .content-section {
-      padding: 6rem 2rem;
+      padding: 7rem 2rem;
+      position: relative;
+      background: white;
     }
     
-    .content-section.alt-bg {
+    .content-section.gray-bg {
       background: #f8f9fa;
+    }
+    
+    /* Wave Divider Top */
+    .wave-divider-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    
+    .wave-divider-top svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 80px;
     }
     
     .section-container {
@@ -322,7 +363,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 5rem;
       align-items: center;
     }
     
@@ -335,41 +376,49 @@
     }
     
     .section-content h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
+      color: #0d6efd;
+      margin-bottom: 1.8rem;
       font-family: 'Poppins', sans-serif;
+      line-height: 1.3;
     }
     
     .section-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #475569;
-      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #495057;
+      margin-bottom: 1.2rem;
+    }
+    
+    .section-image-wrapper {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(13, 110, 253, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .section-image-wrapper:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 80px rgba(13, 110, 253, 0.25);
     }
     
     .section-image {
       width: 100%;
       height: 500px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
-    }
-    
-    .section-image:hover {
-      transform: scale(1.02);
+      display: block;
     }
     
     /* ============================================
-       SURVEY CARDS SECTION
+       SURVEY CARDS - MODERN ROUNDED DESIGN
     ============================================ */
     
     .survey-section {
-      padding: 6rem 2rem;
-      background: #2c3e50;
-      color: white;
+      padding: 7rem 2rem;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
     }
     
     .survey-container {
@@ -379,19 +428,20 @@
     
     .survey-header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
     }
     
     .survey-header h2 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 700;
       margin-bottom: 1rem;
       font-family: 'Poppins', sans-serif;
+      color: #0d6efd;
     }
     
     .survey-header p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
+      font-size: 1.3rem;
+      color: #6c757d;
     }
     
     .survey-grid {
@@ -401,39 +451,68 @@
     }
     
     .survey-card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 2.5rem 1.5rem;
+      background: white;
+      border-radius: 20px;
+      padding: 3rem 2rem;
       text-align: center;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
       text-decoration: none;
-      color: white;
+      color: #343a40;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       border: 2px solid transparent;
-      min-height: 200px;
+      min-height: 220px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .survey-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0d6efd, #198754);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+    
+    .survey-card:hover::before {
+      opacity: 1;
     }
     
     .survey-card:hover {
-      background: rgba(255,255,255,0.1);
-      transform: translateY(-10px);
-      border-color: #e74c3c;
-      box-shadow: 0 15px 40px rgba(231, 76, 60, 0.3);
+      transform: translateY(-15px);
+      border-color: #0d6efd;
+      box-shadow: 0 20px 50px rgba(13, 110, 253, 0.3);
+    }
+    
+    .survey-card:hover h3,
+    .survey-card:hover .survey-icon {
+      color: white;
+      position: relative;
+      z-index: 1;
     }
     
     .survey-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s ease;
     }
     
     .survey-card h3 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 600;
       font-family: 'Poppins', sans-serif;
+      transition: color 0.4s ease;
+      position: relative;
+      z-index: 1;
     }
     
     /* ============================================
@@ -441,8 +520,9 @@
     ============================================ */
     
     .about-section {
-      padding: 6rem 2rem;
-      background: #f8f9fa;
+      padding: 7rem 2rem;
+      background: white;
+      position: relative;
     }
     
     .about-container {
@@ -452,47 +532,47 @@
     
     .about-header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
     
     .about-header h2 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 700;
-      color: #2c3e50;
+      color: #0d6efd;
       margin-bottom: 1rem;
       font-family: 'Poppins', sans-serif;
     }
     
     .about-content {
-      background: white;
-      padding: 3rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem;
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
     }
     
     .about-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #475569;
-      margin-bottom: 1.5rem;
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #495057;
+      margin-bottom: 1.8rem;
     }
     
     .read-more-btn {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.9rem 2rem;
-      background: #e74c3c;
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
       color: white;
       text-decoration: none;
       border-radius: 50px;
       font-weight: 600;
       transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
     }
     
     .read-more-btn:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(13, 110, 253, 0.4);
     }
     
     /* ============================================
@@ -500,8 +580,8 @@
     ============================================ */
     
     .why-choose-section {
-      padding: 6rem 2rem;
-      background: white;
+      padding: 7rem 2rem;
+      background: #f8f9fa;
     }
     
     .why-choose-container {
@@ -511,52 +591,62 @@
     
     .why-choose-header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
     }
     
     .why-choose-header h2 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 700;
-      color: #2c3e50;
+      color: #0d6efd;
       margin-bottom: 1rem;
       font-family: 'Poppins', sans-serif;
     }
     
     .why-choose-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 3rem;
     }
     
     .why-choose-item {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .why-choose-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(13, 110, 253, 0.15);
     }
     
     .why-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #0d6efd, #198754);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2.5rem;
+      margin: 0 auto 2rem;
+      font-size: 3rem;
+      box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
     }
     
     .why-choose-item h3 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 1rem;
+      color: #343a40;
+      margin-bottom: 1.2rem;
       font-family: 'Poppins', sans-serif;
     }
     
     .why-choose-item p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #64748b;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #6c757d;
     }
     
     /* ============================================
@@ -564,8 +654,8 @@
     ============================================ */
     
     .clients-section {
-      padding: 5rem 2rem;
-      background: #f8f9fa;
+      padding: 6rem 2rem;
+      background: white;
     }
     
     .clients-container {
@@ -575,13 +665,13 @@
     
     .clients-header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
     
     .clients-header h2 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      color: #2c3e50;
+      color: #0d6efd;
       font-family: 'Poppins', sans-serif;
     }
     
@@ -597,7 +687,7 @@
       height: 80px;
       object-fit: contain;
       filter: grayscale(100%);
-      opacity: 0.6;
+      opacity: 0.5;
       transition: all 0.3s ease;
     }
     
@@ -608,26 +698,49 @@
     }
     
     /* ============================================
-       FOOTER
+       FOOTER - CURVED TOP DESIGN
     ============================================ */
     
     footer {
-      background: #2c3e50;
+      background: #0d6efd;
       color: white;
-      padding: 4rem 2rem 2rem;
+      position: relative;
+      padding: 5rem 2rem 2rem;
+    }
+    
+    /* Curved Wave Top */
+    .footer-wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+    
+    .footer-wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 100px;
+    }
+    
+    .footer-wave .shape-fill {
+      fill: #ffffff;
     }
     
     .footer-container {
       max-width: 1400px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3rem;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 4rem;
       margin-bottom: 3rem;
     }
     
     .footer-section h3 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       font-family: 'Poppins', sans-serif;
@@ -638,29 +751,47 @@
     }
     
     .footer-section ul li {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.9rem;
     }
     
     .footer-section a {
-      color: #cbd5e1;
+      color: rgba(255,255,255,0.8);
       text-decoration: none;
       transition: color 0.3s ease;
+      font-size: 1rem;
     }
     
     .footer-section a:hover {
-      color: #e74c3c;
+      color: white;
     }
     
     .footer-section p {
-      color: #cbd5e1;
+      color: rgba(255,255,255,0.8);
       line-height: 1.8;
+      font-size: 1rem;
+    }
+    
+    .footer-logo-wrapper {
+      margin-top: 1.5rem;
+    }
+    
+    .footer-logo {
+      max-width: 150px;
+      height: auto;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+    
+    .footer-logo:hover {
+      opacity: 1;
     }
     
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
     }
     
     /* ============================================
@@ -671,8 +802,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 3px;
-      background: #e74c3c;
+      height: 4px;
+      background: linear-gradient(90deg, #0d6efd, #198754);
       z-index: 9999;
       width: 0%;
       transition: width 0.1s ease;
@@ -700,11 +831,11 @@
       }
       
       .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
       
       .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
       }
       
       .section-container {
@@ -732,7 +863,7 @@
     
     @media (max-width: 640px) {
       .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       
       .hero-content p {
@@ -748,7 +879,7 @@
       }
       
       .section-content h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       
       .section-image {
@@ -770,40 +901,28 @@
       .content-section {
         padding: 4rem 1.5rem;
       }
+      
+      .survey-section {
+        padding: 4rem 1.5rem;
+      }
+      
+      .about-content {
+        padding: 2.5rem 1.5rem;
+      }
     }
     
     /* ============================================
        ANIMATIONS
     ============================================ */
     
-    @keyframes slideInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes slideOutUp {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-    }
-    
     @keyframes fadeIn {
       from {
         opacity: 0;
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
@@ -844,19 +963,20 @@
    </ul>
   </div><!-- Hero Section -->
   <section class="hero-section">
-   <video class="hero-video" autoplay muted loop playsinline><source src="videos/home-hero.mp4" type="video/mp4">
-   </video>
-   <div class="hero-overlay"></div>
-   <div class="hero-content" data-aos="fade-up">
+   <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
     <h1>Geologists, Geophysicists and Field Specialists</h1>
     <p>Ground mapping, mineral investigations, oil prospecting, contamination mapping and geotechnical investigations. We work anywhere in the world, specializing in handling arctic conditions and other inaccessible places far from civilization.</p>
     <div class="hero-cta"><a href="geophysical-surveys.html" class="cta-button cta-primary">Learn More</a> <a href="contact.html" class="cta-button cta-secondary">Contact Us</a>
     </div>
+   </div><!-- Curved Wave Bottom -->
+   <div class="hero-wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 120" preserveaspectratio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
    </div>
   </section><!-- Always Ready to Help Section -->
   <section class="content-section">
    <div class="section-container">
-    <div data-aos="fade-right"><img src="images/home-2.jpeg" alt="Geophysical field equipment" class="section-image">
+    <div class="section-image-wrapper" data-aos="fade-right"><img src="images/home-2.jpeg" alt="Geophysical field equipment" class="section-image">
     </div>
     <div class="section-content" data-aos="fade-left">
      <h2>Always Ready to Help</h2>
@@ -865,9 +985,9 @@
     </div>
    </div>
   </section><!-- No Job Too Big/Small Section -->
-  <section class="content-section alt-bg">
+  <section class="content-section gray-bg">
    <div class="section-container reverse">
-    <div data-aos="fade-left"><img src="images/home-1.jpeg" alt="Field work in remote locations" class="section-image">
+    <div class="section-image-wrapper" data-aos="fade-left"><img src="images/home-1.jpeg" alt="Field work in remote locations" class="section-image">
     </div>
     <div class="section-content" data-aos="fade-right">
      <h2>No Job is Too Big, No Job is Too Small</h2>
@@ -882,28 +1002,28 @@
      <h2>Our Geophysical Survey Methods</h2>
      <p>Explore our range of specialized geophysical techniques</p>
     </div>
-    <div class="survey-grid"><a href="dcip.html" class="survey-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="survey-grid"><a href="dcip.html" class="survey-card" data-aos="zoom-in" data-aos-delay="100">
       <div class="survey-icon">
        ⚡
-      </div><h3>DCIP</h3></a> <a href="ttem.html" class="survey-card" data-aos="fade-up" data-aos-delay="150">
+      </div><h3>DCIP</h3></a> <a href="ttem.html" class="survey-card" data-aos="zoom-in" data-aos-delay="150">
       <div class="survey-icon">
        📡
-      </div><h3>TTEM</h3></a> <a href="seismics.html" class="survey-card" data-aos="fade-up" data-aos-delay="200">
+      </div><h3>TTEM</h3></a> <a href="seismics.html" class="survey-card" data-aos="zoom-in" data-aos-delay="200">
       <div class="survey-icon">
        🌊
-      </div><h3>Seismics</h3></a> <a href="gsm.html" class="survey-card" data-aos="fade-up" data-aos-delay="250">
+      </div><h3>Seismics</h3></a> <a href="gsm.html" class="survey-card" data-aos="zoom-in" data-aos-delay="250">
       <div class="survey-icon">
        🗺️
-      </div><h3>GSM</h3></a> <a href="gravimetrics.html" class="survey-card" data-aos="fade-up" data-aos-delay="300">
+      </div><h3>GSM</h3></a> <a href="gravimetrics.html" class="survey-card" data-aos="zoom-in" data-aos-delay="300">
       <div class="survey-icon">
        ⚖️
-      </div><h3>Gravimetrics</h3></a> <a href="magnetics.html" class="survey-card" data-aos="fade-up" data-aos-delay="350">
+      </div><h3>Gravimetrics</h3></a> <a href="magnetics.html" class="survey-card" data-aos="zoom-in" data-aos-delay="350">
       <div class="survey-icon">
        🧲
-      </div><h3>Magnetics</h3></a> <a href="mrs.html" class="survey-card" data-aos="fade-up" data-aos-delay="400">
+      </div><h3>Magnetics</h3></a> <a href="mrs.html" class="survey-card" data-aos="zoom-in" data-aos-delay="400">
       <div class="survey-icon">
        💧
-      </div><h3>MRS</h3></a> <a href="methods-overview.html" class="survey-card" data-aos="fade-up" data-aos-delay="450">
+      </div><h3>MRS</h3></a> <a href="methods-overview.html" class="survey-card" data-aos="zoom-in" data-aos-delay="450">
       <div class="survey-icon">
        📋
       </div><h3>Methods &amp; Techniques</h3></a>
@@ -970,15 +1090,21 @@
     <div class="clients-header" data-aos="fade-up">
      <h2>Some of the Companies We Have Worked With</h2>
     </div>
-    <div class="clients-grid"><img src="images/ams.jpeg" alt="AMS" class="client-logo" data-aos="fade-up" data-aos-delay="100"> <img src="images/cowi.png" alt="COWI" class="client-logo" data-aos="fade-up" data-aos-delay="150"> <img src="images/dmr.jpeg" alt="DMR" class="client-logo" data-aos="fade-up" data-aos-delay="200"> <img src="images/ramboll.jpeg" alt="Ramboll" class="client-logo" data-aos="fade-up" data-aos-delay="250"> <img src="images/niras.jpeg" alt="NIRAS" class="client-logo" data-aos="fade-up" data-aos-delay="300"> <img src="images/wsp.jpeg" alt="WSP" class="client-logo" data-aos="fade-up" data-aos-delay="350">
+    <div class="clients-grid"><img src="images/clients/ams.jpeg" alt="AMS" class="client-logo" data-aos="fade-up" data-aos-delay="100"> <img src="images/clients/cowi.png" alt="COWI" class="client-logo" data-aos="fade-up" data-aos-delay="150"> <img src="images/clients/dmr.png" alt="DMR" class="client-logo" data-aos="fade-up" data-aos-delay="200"> <img src="images/clients/ramboll.png" alt="Ramboll" class="client-logo" data-aos="fade-up" data-aos-delay="250"> <img src="images/clients/niras.png" alt="NIRAS" class="client-logo" data-aos="fade-up" data-aos-delay="300"> <img src="images/clients/wsp.png" alt="WSP" class="client-logo" data-aos="fade-up" data-aos-delay="350">
     </div>
    </div>
   </section><!-- Footer -->
-  <footer>
+  <footer><!-- Curved Wave Top -->
+   <div class="footer-wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 120" preserveaspectratio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+   </div>
    <div class="footer-container">
     <div class="footer-section">
      <h3>Bargheer Geophysics</h3>
      <p>Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.</p>
+     <div class="footer-logo-wrapper"><img src="images/subsoil-logo.png" alt="Subsoil Logo" class="footer-logo">
+     </div>
     </div>
     <div class="footer-section">
      <h3>Services</h3>
@@ -1010,5 +1136,5 @@
   </footer><!-- AOS Animation Library -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><!-- Main JavaScript -->
   <script src="main.js"></script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af4fe3ba29fb0f0',t:'MTc2NTk1OTU0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-  </html>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af56469f589b0f0',t:'MTc2NTk2MzcyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
