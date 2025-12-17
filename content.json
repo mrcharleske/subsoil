@@ -1,0 +1,146 @@
+{
+  "site": {
+    "name": "Bargheer Geophysics",
+    "tagline": "Geologists, Geophysicists and Field Specialists",
+    "logo": "BG",
+    "email": "info@bargheergeophysics.com"
+  },
+  "navigation": [
+    {"name": "Home", "url": "index.html"},
+    {"name": "Geophysical Surveys", "url": "geophysical-surveys.html"},
+    {"name": "Software", "url": "geophysics-software.html"},
+    {"name": "About", "url": "about.html"},
+    {"name": "Contact", "url": "contact.html"}
+  ],
+  "hero": {
+    "title": "Geologists, Geophysicists and Field Specialists",
+    "description": "Ground mapping, mineral investigations, oil prospecting, contamination mapping and geotechnical investigations. We work anywhere in the world, specializing in handling arctic conditions and other inaccessible places far from civilization.",
+    "primaryCTA": {
+      "text": "Learn More",
+      "url": "geophysical-surveys.html"
+    },
+    "secondaryCTA": {
+      "text": "Contact Us",
+      "url": "contact.html"
+    }
+  },
+  "contentSections": [
+    {
+      "id": "always-ready",
+      "title": "Always Ready to Help",
+      "content": [
+        "Bargheer Geophysics produces subsoil surveys using geophysics: Geoelectrics, IP, seismics, Gravimetric Measurements and other types of geophysics. The company is specialized in DC-IP measurements and is at the very forefront of scientific developments in this field.",
+        "We have extensive experience with groundwater mapping and other groundwater related work, mineral exploration, geotechnics, contamination mapping and more. If you want to know something about the underground, we can probably help you."
+      ],
+      "image": "images/home-2.jpeg",
+      "imageAlt": "Geophysical field equipment",
+      "imagePosition": "left"
+    },
+    {
+      "id": "no-job-too-big",
+      "title": "No Job is Too Big, No Job is Too Small",
+      "content": [
+        "We work anywhere in the world, specialized in handling arctic conditions and other inaccessible places far from civilization. Key values include efficiency, competitive prices and always ensuring the highest possible data quality.",
+        "Contact us and let us together find out what we can do for you!"
+      ],
+      "image": "images/home-1.jpeg",
+      "imageAlt": "Field work in remote locations",
+      "imagePosition": "right"
+    }
+  ],
+  "surveyMethods": {
+    "title": "Our Geophysical Survey Methods",
+    "subtitle": "Explore our range of specialized geophysical techniques",
+    "methods": [
+      {"name": "DCIP", "icon": "⚡", "url": "dcip.html"},
+      {"name": "TTEM", "icon": "📡", "url": "ttem.html"},
+      {"name": "Seismics", "icon": "🌊", "url": "seismics.html"},
+      {"name": "GSM", "icon": "🗺️", "url": "gsm.html"},
+      {"name": "Gravimetrics", "icon": "⚖️", "url": "gravimetrics.html"},
+      {"name": "Magnetics", "icon": "🧲", "url": "magnetics.html"},
+      {"name": "MRS", "icon": "💧", "url": "mrs.html"},
+      {"name": "Methods & Techniques", "icon": "📋", "url": "methods-overview.html"}
+    ]
+  },
+  "about": {
+    "title": "About Bargheer Geophysics",
+    "content": [
+      "Bargheer Geophysics was started by Arne Bargheer in 2015 after he had been working 15 years with geophysics within the engineering and consultancy industry in Denmark. Geophysics in Denmark in this period had a huge golden age thanks to a groundwater mapping done by the danish state resulting in much resources being put into mapping the underground in Denmark, making the danish underground one of the best investigated in the world and in turn also generating in a lot of geophysical innovations.",
+      "Arne has been involved in a big part of the danish groundwater mapping and is experienced in all the geophysical methods that have been used for this mapping and a broad range of other types of geophysics. Apart from groundwater mapping Arne has among other things been doing projects involving mineral investigations, oil prospecting, contamination mapping and geotechnical investigations."
+    ],
+    "ctaText": "Read More About Us",
+    "ctaUrl": "about.html"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Bargheer Geophysics",
+    "reasons": [
+      {
+        "icon": "🏔️",
+        "title": "Arctic & Remote Expertise",
+        "description": "Specialized in handling extreme arctic conditions and inaccessible places far from civilization with proven track record in Greenland and remote locations worldwide."
+      },
+      {
+        "icon": "💻",
+        "title": "Cutting-Edge Technology",
+        "description": "Innovative programming and data processing capabilities developed in-house, enabling work at a quality and speed unrivaled in the industry."
+      },
+      {
+        "icon": "🎯",
+        "title": "Unmatched Data Quality",
+        "description": "Reputation for collecting the best quality data under even the most extreme conditions. Always ensuring the highest possible data quality on every project."
+      },
+      {
+        "icon": "🌍",
+        "title": "Global Experience",
+        "description": "Extensive project experience across continents including Denmark, Greenland, Africa, and worldwide. We work anywhere in the world."
+      },
+      {
+        "icon": "⚡",
+        "title": "Efficiency & Value",
+        "description": "Key values include efficiency, competitive prices, and fast turnaround without compromising on quality. No job is too big or too small."
+      }
+    ]
+  },
+  "clients": {
+    "title": "Some of the Companies We Have Worked With",
+    "logos": [
+      {"name": "AMS", "image": "images/clients/ams.jpeg"},
+      {"name": "COWI", "image": "images/clients/cowi.png"},
+      {"name": "DMR", "image": "images/clients/dmr.png"},
+      {"name": "Ramboll", "image": "images/clients/ramboll.png"},
+      {"name": "NIRAS", "image": "images/clients/niras.png"},
+      {"name": "WSP", "image": "images/clients/wsp.png"}
+    ]
+  },
+  "footer": {
+    "company": {
+      "name": "Bargheer Geophysics",
+      "description": "Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.",
+      "logo": "images/subsoil-logo.png"
+    },
+    "services": {
+      "title": "Services",
+      "links": [
+        {"name": "DCIP", "url": "dcip.html"},
+        {"name": "TTEM", "url": "ttem.html"},
+        {"name": "Seismics", "url": "seismics.html"},
+        {"name": "Gravimetrics", "url": "gravimetrics.html"},
+        {"name": "Magnetics", "url": "magnetics.html"}
+      ]
+    },
+    "company_links": {
+      "title": "Company",
+      "links": [
+        {"name": "About Us", "url": "about.html"},
+        {"name": "Software", "url": "geophysics-software.html"},
+        {"name": "Contact", "url": "contact.html"}
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "info@bargheergeophysics.com",
+      "tagline": "We work anywhere in the world"
+    },
+    "copyright": "© 2024 Bargheer Geophysics. All rights reserved."
+  }
+}
