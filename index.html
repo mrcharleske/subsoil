@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bargheer Geophysics - Professional geophysical surveys worldwide. Specialists in DCIP, TTEM, seismics, groundwater mapping, and mineral exploration. Expert in arctic conditions and remote locations.">
+  <meta name="keywords" content="geophysics, geophysical surveys, DCIP, TTEM, seismics, groundwater mapping, mineral exploration, arctic geophysics, Bargheer">
+  <meta name="author" content="Bargheer Geophysics">
+  <meta name="theme-color" content="#2c3e50"><!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bargheer Geophysics - Geologists, Geophysicists and Field Specialists">
+  <meta property="og:description" content="Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.">
+  <meta property="og:image" content="/images/og-image.jpg"><!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+  <link rel="apple-touch-icon" href="/images/icon-192.png">
+  <title>Bargheer Geophysics - Geologists, Geophysicists and Field Specialists</title><!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"><!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* ============================================
+       NAVIGATION
+    ============================================ */
+    
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(44, 62, 80, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    nav.scrolled {
+      background: rgba(44, 62, 80, 1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo {
+      width: 50px;
+      height: 50px;
+      background: #e74c3c;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .company-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #e74c3c;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .nav-links a:hover {
+      color: #e74c3c;
+    }
+    
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+    
+    .mobile-menu-toggle span {
+      width: 30px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 400px;
+      height: 100vh;
+      background: #2c3e50;
+      z-index: 1001;
+      transition: right 0.3s ease;
+      padding: 6rem 2rem 2rem;
+    }
+    
+    .mobile-menu.active {
+      right: 0;
+    }
+    
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .mobile-menu a:hover {
+      color: #e74c3c;
+    }
+    
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .menu-overlay.active {
+      opacity: 1;
+    }
+    
+    /* ============================================
+       HERO SECTION
+    ============================================ */
+    
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.75));
+      z-index: 2;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: white;
+      max-width: 1000px;
+      padding: 2rem;
+    }
+    
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero-content p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-button {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .cta-primary {
+      background: #e74c3c;
+      color: white;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    }
+    
+    .cta-primary:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+    }
+    
+    .cta-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .cta-secondary:hover {
+      background: white;
+      color: #2c3e50;
+      transform: translateY(-2px);
+    }
+    
+    /* ============================================
+       CONTENT SECTIONS
+    ============================================ */
+    
+    .content-section {
+      padding: 6rem 2rem;
+    }
+    
+    .content-section.alt-bg {
+      background: #f8f9fa;
+    }
+    
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .section-container.reverse {
+      direction: rtl;
+    }
+    
+    .section-container.reverse > * {
+      direction: ltr;
+    }
+    
+    .section-content h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .section-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+    
+    .section-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    
+    .section-image:hover {
+      transform: scale(1.02);
+    }
+    
+    /* ============================================
+       SURVEY CARDS SECTION
+    ============================================ */
+    
+    .survey-section {
+      padding: 6rem 2rem;
+      background: #2c3e50;
+      color: white;
+    }
+    
+    .survey-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .survey-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .survey-header h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .survey-header p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+    
+    .survey-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    .survey-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+      min-height: 200px;
+    }
+    
+    .survey-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-10px);
+      border-color: #e74c3c;
+      box-shadow: 0 15px 40px rgba(231, 76, 60, 0.3);
+    }
+    
+    .survey-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .survey-card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    /* ============================================
+       ABOUT PREVIEW SECTION
+    ============================================ */
+    
+    .about-section {
+      padding: 6rem 2rem;
+      background: #f8f9fa;
+    }
+    
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .about-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .about-header h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .about-content {
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #475569;
+      margin-bottom: 1.5rem;
+    }
+    
+    .read-more-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2rem;
+      background: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .read-more-btn:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    }
+    
+    /* ============================================
+       WHY CHOOSE US SECTION
+    ============================================ */
+    
+    .why-choose-section {
+      padding: 6rem 2rem;
+      background: white;
+    }
+    
+    .why-choose-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .why-choose-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .why-choose-header h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    
+    .why-choose-item {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .why-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem;
+    }
+    
+    .why-choose-item h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .why-choose-item p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #64748b;
+    }
+    
+    /* ============================================
+       CLIENT LOGOS SECTION
+    ============================================ */
+    
+    .clients-section {
+      padding: 5rem 2rem;
+      background: #f8f9fa;
+    }
+    
+    .clients-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .clients-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .clients-header h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    .client-logo {
+      width: 100%;
+      height: 80px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+    
+    .client-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    /* ============================================
+       FOOTER
+    ============================================ */
+    
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 4rem 2rem 2rem;
+    }
+    
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: #e74c3c;
+    }
+    
+    .footer-section p {
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #94a3b8;
+    }
+    
+    /* ============================================
+       SCROLL PROGRESS BAR
+    ============================================ */
+    
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #e74c3c;
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+    
+    /* ============================================
+       RESPONSIVE DESIGN
+    ============================================ */
+    
+    @media (max-width: 1024px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .mobile-menu {
+        display: block;
+      }
+      
+      .menu-overlay {
+        display: block;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      
+      .section-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .section-image {
+        height: 400px;
+      }
+      
+      .survey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+      }
+      
+      .cta-button {
+        width: 100%;
+      }
+      
+      .section-content h2 {
+        font-size: 2rem;
+      }
+      
+      .section-image {
+        height: 300px;
+      }
+      
+      .survey-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .content-section {
+        padding: 4rem 1.5rem;
+      }
+    }
+    
+    /* ============================================
+       ANIMATIONS
+    ============================================ */
+    
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideOutUp {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div><!-- Navigation -->
+  <nav>
+   <div class="nav-container">
+    <div class="logo-section">
+     <div class="logo">
+      BG
+     </div>
+     <div class="company-name">
+      Bargheer Geophysics
+     </div>
+    </div>
+    <ul class="nav-links">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="geophysical-surveys.html">Geophysical Surveys</a></li>
+     <li><a href="geophysics-software.html">Software</a></li>
+     <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">Contact</a></li>
+    </ul><button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu"> <span></span> <span></span> <span></span> </button>
+   </div>
+  </nav><!-- Mobile Menu -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="geophysical-surveys.html">Geophysical Surveys</a></li>
+    <li><a href="geophysics-software.html">Software</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+   </ul>
+  </div><!-- Hero Section -->
+  <section class="hero-section">
+   <video class="hero-video" autoplay muted loop playsinline><source src="videos/home-hero.mp4" type="video/mp4">
+   </video>
+   <div class="hero-overlay"></div>
+   <div class="hero-content" data-aos="fade-up">
+    <h1>Geologists, Geophysicists and Field Specialists</h1>
+    <p>Ground mapping, mineral investigations, oil prospecting, contamination mapping and geotechnical investigations. We work anywhere in the world, specializing in handling arctic conditions and other inaccessible places far from civilization.</p>
+    <div class="hero-cta"><a href="geophysical-surveys.html" class="cta-button cta-primary">Learn More</a> <a href="contact.html" class="cta-button cta-secondary">Contact Us</a>
+    </div>
+   </div>
+  </section><!-- Always Ready to Help Section -->
+  <section class="content-section">
+   <div class="section-container">
+    <div data-aos="fade-right"><img src="images/home-2.jpeg" alt="Geophysical field equipment" class="section-image">
+    </div>
+    <div class="section-content" data-aos="fade-left">
+     <h2>Always Ready to Help</h2>
+     <p>Bargheer Geophysics produces subsoil surveys using geophysics: Geoelectrics, IP, seismics, Gravimetric Measurements and other types of geophysics. The company is specialized in DC-IP measurements and is at the very forefront of scientific developments in this field.</p>
+     <p>We have extensive experience with groundwater mapping and other groundwater related work, mineral exploration, geotechnics, contamination mapping and more. If you want to know something about the underground, we can probably help you.</p>
+    </div>
+   </div>
+  </section><!-- No Job Too Big/Small Section -->
+  <section class="content-section alt-bg">
+   <div class="section-container reverse">
+    <div data-aos="fade-left"><img src="images/home-1.jpeg" alt="Field work in remote locations" class="section-image">
+    </div>
+    <div class="section-content" data-aos="fade-right">
+     <h2>No Job is Too Big, No Job is Too Small</h2>
+     <p>We work anywhere in the world, specialized in handling arctic conditions and other inaccessible places far from civilization. Key values include efficiency, competitive prices and always ensuring the highest possible data quality.</p>
+     <p>Contact us and let us together find out what we can do for you!</p>
+    </div>
+   </div>
+  </section><!-- Survey Methods Section -->
+  <section class="survey-section">
+   <div class="survey-container">
+    <div class="survey-header" data-aos="fade-up">
+     <h2>Our Geophysical Survey Methods</h2>
+     <p>Explore our range of specialized geophysical techniques</p>
+    </div>
+    <div class="survey-grid"><a href="dcip.html" class="survey-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="survey-icon">
+       ⚡
+      </div><h3>DCIP</h3></a> <a href="ttem.html" class="survey-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="survey-icon">
+       📡
+      </div><h3>TTEM</h3></a> <a href="seismics.html" class="survey-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="survey-icon">
+       🌊
+      </div><h3>Seismics</h3></a> <a href="gsm.html" class="survey-card" data-aos="fade-up" data-aos-delay="250">
+      <div class="survey-icon">
+       🗺️
+      </div><h3>GSM</h3></a> <a href="gravimetrics.html" class="survey-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="survey-icon">
+       ⚖️
+      </div><h3>Gravimetrics</h3></a> <a href="magnetics.html" class="survey-card" data-aos="fade-up" data-aos-delay="350">
+      <div class="survey-icon">
+       🧲
+      </div><h3>Magnetics</h3></a> <a href="mrs.html" class="survey-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="survey-icon">
+       💧
+      </div><h3>MRS</h3></a> <a href="methods-overview.html" class="survey-card" data-aos="fade-up" data-aos-delay="450">
+      <div class="survey-icon">
+       📋
+      </div><h3>Methods &amp; Techniques</h3></a>
+    </div>
+   </div>
+  </section><!-- About Preview Section -->
+  <section class="about-section">
+   <div class="about-container">
+    <div class="about-header" data-aos="fade-up">
+     <h2>About Bargheer Geophysics</h2>
+    </div>
+    <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+     <p>Bargheer Geophysics was started by Arne Bargheer in 2015 after he had been working 15 years with geophysics within the engineering and consultancy industry in Denmark. Geophysics in Denmark in this period had a huge golden age thanks to a groundwater mapping done by the danish state resulting in much resources being put into mapping the underground in Denmark, making the danish underground one of the best investigated in the world and in turn also generating in a lot of geophysical innovations.</p>
+     <p>Arne has been involved in a big part of the danish groundwater mapping and is experienced in all the geophysical methods that have been used for this mapping and a broad range of other types of geophysics. Apart from groundwater mapping Arne has among other things been doing projects involving mineral investigations, oil prospecting, contamination mapping and geotechnical investigations.</p><a href="about.html" class="read-more-btn">Read More About Us</a>
+    </div>
+   </div>
+  </section><!-- Why Choose Us Section -->
+  <section class="why-choose-section">
+   <div class="why-choose-container">
+    <div class="why-choose-header" data-aos="fade-up">
+     <h2>Why Choose Bargheer Geophysics</h2>
+    </div>
+    <div class="why-choose-grid">
+     <div class="why-choose-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="why-icon">
+       🏔️
+      </div>
+      <h3>Arctic &amp; Remote Expertise</h3>
+      <p>Specialized in handling extreme arctic conditions and inaccessible places far from civilization with proven track record in Greenland and remote locations worldwide.</p>
+     </div>
+     <div class="why-choose-item" data-aos="fade-up" data-aos-delay="150">
+      <div class="why-icon">
+       💻
+      </div>
+      <h3>Cutting-Edge Technology</h3>
+      <p>Innovative programming and data processing capabilities developed in-house, enabling work at a quality and speed unrivaled in the industry.</p>
+     </div>
+     <div class="why-choose-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="why-icon">
+       🎯
+      </div>
+      <h3>Unmatched Data Quality</h3>
+      <p>Reputation for collecting the best quality data under even the most extreme conditions. Always ensuring the highest possible data quality on every project.</p>
+     </div>
+     <div class="why-choose-item" data-aos="fade-up" data-aos-delay="250">
+      <div class="why-icon">
+       🌍
+      </div>
+      <h3>Global Experience</h3>
+      <p>Extensive project experience across continents including Denmark, Greenland, Africa, and worldwide. We work anywhere in the world.</p>
+     </div>
+     <div class="why-choose-item" data-aos="fade-up" data-aos-delay="300">
+      <div class="why-icon">
+       ⚡
+      </div>
+      <h3>Efficiency &amp; Value</h3>
+      <p>Key values include efficiency, competitive prices, and fast turnaround without compromising on quality. No job is too big or too small.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Client Logos Section -->
+  <section class="clients-section">
+   <div class="clients-container">
+    <div class="clients-header" data-aos="fade-up">
+     <h2>Some of the Companies We Have Worked With</h2>
+    </div>
+    <div class="clients-grid"><img src="images/clients/ams.jpeg" alt="AMS" class="client-logo" data-aos="fade-up" data-aos-delay="100"> <img src="images/clients/cowi.png" alt="COWI" class="client-logo" data-aos="fade-up" data-aos-delay="150"> <img src="images/clients/dmr.png" alt="DMR" class="client-logo" data-aos="fade-up" data-aos-delay="200"> <img src="images/clients/ramboll.png" alt="Ramboll" class="client-logo" data-aos="fade-up" data-aos-delay="250"> <img src="images/clients/niras.png" alt="NIRAS" class="client-logo" data-aos="fade-up" data-aos-delay="300"> <img src="images/clients/wsp.png" alt="WSP" class="client-logo" data-aos="fade-up" data-aos-delay="350">
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer>
+   <div class="footer-container">
+    <div class="footer-section">
+     <h3>Bargheer Geophysics</h3>
+     <p>Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.</p>
+    </div>
+    <div class="footer-section">
+     <h3>Services</h3>
+     <ul>
+      <li><a href="dcip.html">DCIP</a></li>
+      <li><a href="ttem.html">TTEM</a></li>
+      <li><a href="seismics.html">Seismics</a></li>
+      <li><a href="gravimetrics.html">Gravimetrics</a></li>
+      <li><a href="magnetics.html">Magnetics</a></li>
+     </ul>
+    </div>
+    <div class="footer-section">
+     <h3>Company</h3>
+     <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="geophysics-software.html">Software</a></li>
+      <li><a href="contact.html">Contact</a></li>
+     </ul>
+    </div>
+    <div class="footer-section">
+     <h3>Contact</h3>
+     <p>Email: info@bargheergeophysics.com</p>
+     <p>We work anywhere in the world</p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© 2024 Bargheer Geophysics. All rights reserved.</p>
+   </div>
+  </footer><!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><!-- Main JavaScript -->
+  <script src="main.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af4fe3ba29fb0f0',t:'MTc2NTk1OTU0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  </html>
