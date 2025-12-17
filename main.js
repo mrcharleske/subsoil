@@ -42,30 +42,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Desktop dropdown hover functionality
+  // Desktop dropdown CLICK functionality (not hover)
   // Wait a bit for content to load, then add dropdown listeners
   setTimeout(function() {
     const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
     
     dropdownItems.forEach(item => {
+      const mainLink = item.querySelector('.nav-link-with-dropdown');
       const dropdown = item.querySelector('.dropdown-menu');
       
-      item.addEventListener('mouseenter', function() {
-        dropdown.style.display = 'block';
-        setTimeout(() => {
-          dropdown.style.opacity = '1';
-          dropdown.style.transform = 'translateY(0)';
-        }, 10);
+      mainLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        dropdown.classList.toggle('active');
       });
-      
-      item.addEventListener('mouseleave', function() {
-        dropdown.style.opacity = '0';
-        dropdown.style.transform = 'translateY(-10px)';
-        setTimeout(() => {
-          dropdown.style.display = 'none';
-        }, 300);
-      });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-item-dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
     });
   }, 500);
   
 });
+
