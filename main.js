@@ -15,10 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileMenuToggle.addEventListener('click', toggleMobileMenu);
   menuOverlay.addEventListener('click', toggleMobileMenu);
   
-  // Close mobile menu when clicking a link
-  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
-  mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', toggleMobileMenu);
+  // Close mobile menu when clicking a link (except parent links)
+  document.addEventListener('click', function(e) {
+    if (e.target.matches('#mobile-menu a:not(.mobile-nav-parent)')) {
+      toggleMobileMenu();
+    }
   });
   
   // Scroll progress bar
@@ -40,5 +41,31 @@ document.addEventListener('DOMContentLoaded', function() {
       nav.classList.remove('scrolled');
     }
   });
+  
+  // Desktop dropdown hover functionality
+  // Wait a bit for content to load, then add dropdown listeners
+  setTimeout(function() {
+    const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+    
+    dropdownItems.forEach(item => {
+      const dropdown = item.querySelector('.dropdown-menu');
+      
+      item.addEventListener('mouseenter', function() {
+        dropdown.style.display = 'block';
+        setTimeout(() => {
+          dropdown.style.opacity = '1';
+          dropdown.style.transform = 'translateY(0)';
+        }, 10);
+      });
+      
+      item.addEventListener('mouseleave', function() {
+        dropdown.style.opacity = '0';
+        dropdown.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+          dropdown.style.display = 'none';
+        }, 300);
+      });
+    });
+  }, 500);
   
 });
