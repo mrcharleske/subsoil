@@ -54,10 +54,37 @@ function populateNavigation(content) {
   navLinks.innerHTML = '';
   content.navigation.forEach(item => {
     const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = item.url;
-    a.textContent = item.name;
-    li.appendChild(a);
+    
+    if (item.hasDropdown && item.subpages) {
+      // Create dropdown structure
+      li.className = 'nav-item-dropdown';
+      
+      const mainLink = document.createElement('a');
+      mainLink.href = item.url;
+      mainLink.textContent = item.name;
+      mainLink.className = 'nav-link-with-dropdown';
+      
+      const dropdown = document.createElement('div');
+      dropdown.className = 'dropdown-menu';
+      
+      item.subpages.forEach(subpage => {
+        const subLink = document.createElement('a');
+        subLink.href = subpage.url;
+        subLink.textContent = subpage.name;
+        subLink.className = 'dropdown-item';
+        dropdown.appendChild(subLink);
+      });
+      
+      li.appendChild(mainLink);
+      li.appendChild(dropdown);
+    } else {
+      // Regular link
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.name;
+      li.appendChild(a);
+    }
+    
     navLinks.appendChild(li);
   });
   
@@ -66,10 +93,52 @@ function populateNavigation(content) {
   mobileNavLinks.innerHTML = '';
   content.navigation.forEach(item => {
     const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = item.url;
-    a.textContent = item.name;
-    li.appendChild(a);
+    
+    if (item.hasDropdown && item.subpages) {
+      // Create expandable section for mobile
+      li.className = 'mobile-nav-item-dropdown';
+      
+      const mainLink = document.createElement('div');
+      mainLink.className = 'mobile-nav-parent';
+      mainLink.textContent = item.name;
+      
+      const subList = document.createElement('ul');
+      subList.className = 'mobile-submenu';
+      
+      // Add main page link first
+      const mainPageLi = document.createElement('li');
+      const mainPageLink = document.createElement('a');
+      mainPageLink.href = item.url;
+      mainPageLink.textContent = `View ${item.name}`;
+      mainPageLi.appendChild(mainPageLink);
+      subList.appendChild(mainPageLi);
+      
+      // Add subpages
+      item.subpages.forEach(subpage => {
+        const subLi = document.createElement('li');
+        const subLink = document.createElement('a');
+        subLink.href = subpage.url;
+        subLink.textContent = subpage.name;
+        subLi.appendChild(subLink);
+        subList.appendChild(subLi);
+      });
+      
+      li.appendChild(mainLink);
+      li.appendChild(subList);
+      
+      // Toggle submenu on click
+      mainLink.addEventListener('click', function() {
+        this.classList.toggle('active');
+        subList.classList.toggle('active');
+      });
+    } else {
+      // Regular link
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.name;
+      li.appendChild(a);
+    }
+    
     mobileNavLinks.appendChild(li);
   });
 }
@@ -306,14 +375,62 @@ function populateFooter(footerData) {
   contactH3.textContent = footerData.contact.title;
   
   const emailP = document.createElement('p');
-  emailP.textContent = `Email: ${footerData.contact.email}`;
+  const emailLink = document.createElement('a');
+  emailLink.href = `mailto:${footerData.contact.email}`;
+  emailLink.textContent = footerData.contact.email;
+  emailLink.style.color = 'rgba(255,255,255,0.8)';
+  emailLink.style.textDecoration = 'none';
+  emailLink.style.transition = 'color 0.3s ease';
+  emailLink.addEventListener('mouseenter', function() {
+    this.style.color = '#e74c3c';
+  });
+  emailLink.addEventListener('mouseleave', function() {
+    this.style.color = 'rgba(255,255,255,0.8)';
+  });
+  emailP.textContent = 'Email: ';
+  emailP.appendChild(emailLink);
   
   const taglineP = document.createElement('p');
   taglineP.textContent = footerData.contact.tagline;
   
+  // Instagram link with icon
+  const socialP = document.createElement('p');
+  socialP.style.marginTop = '1.5rem';
+  
+  const instagramLink = document.createElement('a');
+  instagramLink.href = footerData.contact.instagram;
+  instagramLink.target = '_blank';
+  instagramLink.rel = 'noopener noreferrer';
+  instagramLink.style.display = 'inline-flex';
+  instagramLink.style.alignItems = 'center';
+  instagramLink.style.gap = '0.5rem';
+  instagramLink.style.color = 'rgba(255,255,255,0.8)';
+  instagramLink.style.textDecoration = 'none';
+  instagramLink.style.fontSize = '1.1rem';
+  instagramLink.style.transition = 'all 0.3s ease';
+  
+  instagramLink.addEventListener('mouseenter', function() {
+    this.style.color = '#e74c3c';
+    this.style.transform = 'translateY(-2px)';
+  });
+  instagramLink.addEventListener('mouseleave', function() {
+    this.style.color = 'rgba(255,255,255,0.8)';
+    this.style.transform = 'translateY(0)';
+  });
+  
+  instagramLink.innerHTML = `
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+    <span>Follow us on Instagram</span>
+  `;
+  
+  socialP.appendChild(instagramLink);
+  
   contactSection.appendChild(contactH3);
   contactSection.appendChild(emailP);
   contactSection.appendChild(taglineP);
+  contactSection.appendChild(socialP);
   container.appendChild(contactSection);
   
   // Copyright
