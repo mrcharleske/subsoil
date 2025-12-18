@@ -1,24 +1,90 @@
 {
   "name": "Bargheer Geophysics",
-  "short_name": "BG Geophysics",
-  "description": "Professional geophysical surveys and software solutions",
+  "short_name": "BGeo",
+  "description": "Professional geophysical surveys worldwide. Specialists in DCIP, TTEM, Seismics, GSM, Gravimetrics, MRS, and more.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ecf0f1",
-  "theme_color": "#2c3e50",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/images/icon-192.png",
+      "src": "images/subsoil-logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/icon-512.png",
+      "src": "images/subsoil-logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "categories": ["business", "science"],
+  "lang": "en-US",
+  "dir": "ltr"
 }
+
+Now sw.js (service worker for offline support):
+
+const CACHE_NAME = 'bargheer-geophysics-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/about.html',
+  '/dcip.html',
+  '/ttem.html',
+  '/seismics.html',
+  '/gsm.html',
+  '/gravimetrics.html',
+  '/geophysics-ai.html',
+  '/mrs.html',
+  '/methods-techniques.html',
+  '/ip-processing.html',
+  '/contact.html',
+  '/privacy.html',
+  '/images/subsoil-logo.png'
+];
+
+// Install service worker
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+// Cache and return requests
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+// Update service worker
+self.addEventListener('activate', event => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
