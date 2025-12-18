@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DCIP Surveys - Bargheer Geophysics</title>
+  <meta name="description" content="Professional DCIP geophysical surveys including DC measurements and IP data collection. State-of-the-art electrical resistivity tomography and induced polarization services.">
+  <link rel="icon" type="image/png" href="images/subsoil-logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .hero-image-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+        }
+        
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #8B7355;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .content-image {
+            transition: all 0.4s ease;
+        }
+        
+        .content-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .gerda-link {
+            color: #3b82f6;
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .gerda-link:hover {
+            color: #1d4ed8;
+        }
+        
+        .gerda-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(to right, #3b82f6, #1d4ed8);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .gerda-link:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full"><!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20"><!-- Logo -->
+     <div class="flex-shrink-0"><a href="index.html"> <img src="images/subsoil-logo.png" alt="Bargheer Geophysics Logo" class="h-12 w-auto" onerror="this.style.display='none';"> </a>
+     </div><!-- Desktop Menu -->
+     <div class="hidden md:flex items-center space-x-8"><a href="index.html" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Home</a> <a href="about.html" class="nav-link text-gray-700 hover:text-gray-900 font-medium">About Us</a>
+      <div class="relative group"><button class="nav-link text-gray-700 hover:text-gray-900 font-medium flex items-center"> Geophysical Surveys 
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"><a href="dcip.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">DCIP</a> <a href="tem.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">TEM</a> <a href="seismics.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Seismics</a> <a href="gsm.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">GSM</a> <a href="gravimetrics.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Gravimetrics</a> <a href="magnetics.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Magnetics</a> <a href="mrs.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">MRS</a> <a href="methods-techniques.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Methods &amp; Techniques</a>
+       </div>
+      </div>
+      <div class="relative group"><button class="nav-link text-gray-700 hover:text-gray-900 font-medium flex items-center"> Geophysics Software 
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"><a href="ip-processing.html" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">IP Processing</a>
+       </div>
+      </div><a href="contact.html" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+     </div><!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg></button>
+    </div>
+   </div><!-- Mobile Menu -->
+   <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+    <div class="px-4 py-3 space-y-2"><a href="index.html" class="block py-2 text-gray-700 hover:text-gray-900 font-medium">Home</a> <a href="about.html" class="block py-2 text-gray-700 hover:text-gray-900 font-medium">About Us</a>
+     <div class="py-2"><button id="mobile-surveys-btn" class="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium"> Geophysical Surveys 
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+       </svg></button>
+      <div id="mobile-surveys-menu" class="hidden pl-4 mt-2 space-y-2"><a href="dcip.html" class="block py-2 text-gray-600 hover:text-gray-900">DCIP</a> <a href="tem.html" class="block py-2 text-gray-600 hover:text-gray-900">TEM</a> <a href="seismics.html" class="block py-2 text-gray-600 hover:text-gray-900">Seismics</a> <a href="gsm.html" class="block py-2 text-gray-600 hover:text-gray-900">GSM</a> <a href="gravimetrics.html" class="block py-2 text-gray-600 hover:text-gray-900">Gravimetrics</a> <a href="magnetics.html" class="block py-2 text-gray-600 hover:text-gray-900">Magnetics</a> <a href="mrs.html" class="block py-2 text-gray-600 hover:text-gray-900">MRS</a> <a href="methods-techniques.html" class="block py-2 text-gray-600 hover:text-gray-900">Methods &amp; Techniques</a>
+      </div>
+     </div>
+     <div class="py-2"><button id="mobile-software-btn" class="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium"> Geophysics Software 
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+       </svg></button>
+      <div id="mobile-software-menu" class="hidden pl-4 mt-2 space-y-2"><a href="ip-processing.html" class="block py-2 text-gray-600 hover:text-gray-900">IP Processing</a>
+      </div>
+     </div><a href="contact.html" class="block py-2 text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="relative h-screen w-full flex items-center justify-center bg-gray-900">
+   <div class="hero-image-container absolute inset-0"><img src="images/dcip-hero-image.jpg" alt="DCIP Geophysical Surveys" onerror="this.style.display='none';">
+   </div>
+   <div class="hero-overlay absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+    <div class="text-center max-w-4xl w-full">
+     <div data-aos="zoom-in" data-aos-duration="1200">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight"><span class="bg-gradient-to-r from-blue-400 to-amber-500 bg-clip-text text-transparent">DCIP</span></h1>
+     </div>
+    </div>
+   </div>
+  </section><!-- DC Measurements Section -->
+  <section class="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center"><!-- Left - Image -->
+     <div data-aos="fade-right" data-aos-duration="1200">
+      <div class="relative group">
+       <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-amber-600 rounded-2xl opacity-25 group-hover:opacity-40 blur transition duration-500"></div><img src="images/dcip-4.jpg" alt="DC Measurements" class="content-image relative w-full h-auto rounded-2xl shadow-2xl" onerror="this.style.display='none';">
+      </div>
+     </div><!-- Right - Content -->
+     <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8"><span class="bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent">DC Measurements</span></h2>
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+       <p>DC measurements is a widely used technique and as such has a long list of names some of which are:</p>
+       <ul class="list-none space-y-3 ml-6">
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> <span><strong>CVES</strong> (Continued Vertical Electrical Sounding)</span></li>
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> <span><strong>ERT</strong> (Electrical Resistivity Tomography)</span></li>
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> <span><strong>MEP</strong> (Multi Electrode Profiling)</span></li>
+       </ul>
+       <p>All of which is the same basic method of using electrodes (usually metal stakes pushed into the ground), emitting current and measuring potential difference.</p>
+       <p>With these measurements it is possible to map the electric resistivity of the ground, a parameter that can be used to make geological interpretation of the underground.</p>
+       <p>Bargheer Geophysics delivers state of the art DC measurement, 2D and/or 3D setups and we make the geophysical modelling with the newest methods and software available, including highly sophisticated in house software.</p>
+       <p>We have been involved (in whole or part) in the collection of approximately a third of the MEP data in the open source national geophysics database, <a href="https://www.geus.dk/produkter-ydelser-og-faciliteter/data-og-kort/national-geofysisk-database-gerda/" target="_blank" rel="noopener noreferrer" class="gerda-link">GERDA</a>.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- IP Data Section -->
+  <section class="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center"><!-- Left - Content -->
+     <div data-aos="fade-right" data-aos-duration="1200">
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8"><span class="bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent">IP Data</span></h2>
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+       <p>With DC measurements only the resistivity of the ground is measured, but more parameters are needed to give a full description of the electrical properties of the subsoil. With IP data this can be done and it is something Bargheer Geophysics specializes in.</p>
+       <p>It is possible to extract IP data using 100% duty cycle using modern instruments, recording full waveform data, this makes data collection of IP data very efficient in the field. Including the IP data in the inversion routines improves the resolution of resistivity structures, plus the extra parameters, together with the resistivity, give a full description electrical properties of the subsoil allow us to make an improved geological interpretation.</p>
+      </div>
+     </div><!-- Right - Image -->
+     <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <div class="relative group">
+       <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-amber-600 rounded-2xl opacity-25 group-hover:opacity-40 blur transition duration-500"></div><img src="images/dcip-2.jpg" alt="IP Data Collection" class="content-image relative w-full h-auto rounded-2xl shadow-2xl" onerror="this.style.display='none';">
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- What DCIP Can Do Section -->
+  <section class="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20"><!-- Left - Image -->
+     <div data-aos="fade-right" data-aos-duration="1200">
+      <div class="relative group">
+       <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-amber-600 rounded-2xl opacity-25 group-hover:opacity-40 blur transition duration-500"></div><img src="images/dcip-1.jpg" alt="DCIP Applications" class="content-image relative w-full h-auto rounded-2xl shadow-2xl" onerror="this.style.display='none';">
+      </div>
+     </div><!-- Right - Content -->
+     <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8"><span class="bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent">What DCIP Can Do</span></h2>
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+       <p>DCIP data is among other things highly linked to the structure of pore space in a medium and for a sedimentary environment this correlates with grain size distributions.</p>
+       <p>Bargheer Geophysics use DCIP data to directly measure the hydraulic conductivity which is a parameter that is otherwise difficult to measure even with drillholes. Knowing the hydraulic conductivity allows for making highly improved hydraulics models.</p>
+      </div>
+     </div>
+    </div><!-- Other Uses Subsection -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center"><!-- Left - Content -->
+     <div data-aos="fade-right" data-aos-duration="1200">
+      <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Other Uses Include:</h3>
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+       <ul class="space-y-4">
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-4 flex-shrink-0"></span> <span>Characterizing value of gravel deposits very accurately</span></li>
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-4 flex-shrink-0"></span> <span>Accurately modelling mineral targets for future mining</span></li>
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-4 flex-shrink-0"></span> <span>Distinguishing different types of geology, that otherwise is impossible to distinguish with other geophysics</span></li>
+        <li class="flex items-start"><span class="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-4 flex-shrink-0"></span> <span>Accurately mapping contamination fans and other substances in the subsoil</span></li>
+       </ul>
+      </div>
+     </div><!-- Right - Image -->
+     <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <div class="relative group">
+       <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-amber-600 rounded-2xl opacity-25 group-hover:opacity-40 blur transition duration-500"></div><img src="images/dcip-3.jpg" alt="DCIP Other Applications" class="content-image relative w-full h-auto rounded-2xl shadow-2xl" onerror="this.style.display='none';">
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="bg-gradient-to-b from-gray-900 via-slate-900 to-black text-gray-300 relative overflow-hidden">
+   <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-amber-600 rounded-full filter blur-3xl"></div>
+   </div>
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"><!-- Company Info -->
+     <div class="lg:col-span-1"><img src="images/subsoil-logo.png" alt="Bargheer Geophysics Logo" class="h-14 w-auto mb-5 transform hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';">
+      <h3 class="text-2xl font-black text-white mb-4 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">Bargheer Geophysics</h3>
+      <p class="text-gray-400 leading-relaxed text-base">Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.</p>
+     </div><!-- Geophysical Survey Methods -->
+     <div>
+      <h4 class="text-xl font-black text-white mb-6 relative inline-block">Geophysical Surveys <span class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></span></h4>
+      <ul class="space-y-3">
+       <li><a href="dcip.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> DCIP </a></li>
+       <li><a href="tem.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> TEM </a></li>
+       <li><a href="seismics.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Seismics </a></li>
+       <li><a href="gsm.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> GSM </a></li>
+       <li><a href="gravimetrics.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Gravimetrics </a></li>
+       <li><a href="magnetics.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Magnetics </a></li>
+       <li><a href="mrs.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> MRS </a></li>
+       <li><a href="methods-techniques.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Methods &amp; Techniques </a></li>
+      </ul>
+     </div><!-- Other Pages -->
+     <div>
+      <h4 class="text-xl font-black text-white mb-6 relative inline-block">Quick Links <span class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></span></h4>
+      <ul class="space-y-3">
+       <li><a href="index.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Home </a></li>
+       <li><a href="about.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> About Us </a></li>
+       <li><a href="ip-processing.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> IP Processing </a></li>
+       <li><a href="contact.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Contact </a></li>
+      </ul>
+     </div><!-- Contact Details -->
+     <div>
+      <h4 class="text-xl font-black text-white mb-6 relative inline-block">Get in Touch <span class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></span></h4>
+      <ul class="space-y-4">
+       <li><a href="tel:+4527136222" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span>(+45) 27 13 62 22</span> </a></li>
+       <li><a href="mailto:ab@bgeo.dk" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+         </svg><span>ab@bgeo.dk</span> </a></li>
+       <li><a href="https://www.instagram.com/arne_bargheer?igsh=MW0wcmc2dWZudDhhNQ==" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg><span>Instagram</span> </a></li>
+       <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Klemstrupvej+5,+8550+Ryomgård" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 mt-0.5 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg><span>Klemstrupvej 5,<br>
+          8550 Ryomgård</span> </a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8">
+     <div class="text-center">
+      <p class="text-gray-500 text-sm">© 2025 Bargheer Geophysics. All rights reserved.</p>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileSurveysBtn = document.getElementById('mobile-surveys-btn');
+        const mobileSurveysMenu = document.getElementById('mobile-surveys-menu');
+        const mobileSoftwareBtn = document.getElementById('mobile-software-btn');
+        const mobileSoftwareMenu = document.getElementById('mobile-software-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileSurveysBtn.addEventListener('click', () => {
+            mobileSurveysMenu.classList.toggle('hidden');
+        });
+        
+        mobileSoftwareBtn.addEventListener('click', () => {
+            mobileSoftwareMenu.classList.toggle('hidden');
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9afe0d1f57a4b0f0',t:'MTc2NjA1NDUyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
