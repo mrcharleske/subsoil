@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Bargheer Geophysics</title>
+  <meta name="description" content="Learn about Bargheer Geophysics - experts in geophysical surveys with 15+ years of experience in groundwater mapping, mineral exploration, and remote field operations.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .hero-image-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+        }
+        
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #8B7355;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .team-photo {
+            transition: all 0.4s ease;
+        }
+        
+        .team-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full"><!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20"><!-- Logo -->
+     <div class="flex-shrink-0"><a href="/index.html"> <img src="images/subsoil-logo.png" alt="Bargheer Geophysics Logo" class="h-12 w-auto" onerror="this.style.display='none';"> </a>
+     </div><!-- Desktop Menu -->
+     <div class="hidden md:flex items-center space-x-8"><a href="/index.html" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Home</a> <a href="/about.html" class="nav-link text-gray-700 hover:text-gray-900 font-medium">About Us</a>
+      <div class="relative group"><button class="nav-link text-gray-700 hover:text-gray-900 font-medium flex items-center"> Geophysical Surveys 
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"><a href="/dcip.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">DCIP</a> <a href="/tem.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">TEM</a> <a href="/seismics.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Seismics</a> <a href="/gsm.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">GSM</a> <a href="/gravimetrics.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Gravimetrics</a> <a href="/magnetics.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Magnetics</a> <a href="/mrs.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">MRS</a> <a href="/methods-techniques.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">Methods &amp; Techniques</a>
+       </div>
+      </div>
+      <div class="relative group"><button class="nav-link text-gray-700 hover:text-gray-900 font-medium flex items-center"> Geophysics Software 
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"><a href="/ip-processing.html" target="_blank" class="block px-4 py-3 hover:bg-gray-50 text-gray-700 hover:text-gray-900">IP Processing</a>
+       </div>
+      </div><a href="/contact.html" target="_blank" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+     </div><!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg></button>
+    </div>
+   </div><!-- Mobile Menu -->
+   <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+    <div class="px-4 py-3 space-y-2"><a href="/index.html" class="block py-2 text-gray-700 hover:text-gray-900 font-medium">Home</a> <a href="/about.html" class="block py-2 text-gray-700 hover:text-gray-900 font-medium">About Us</a>
+     <div class="py-2"><button id="mobile-surveys-btn" class="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium"> Geophysical Surveys 
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+       </svg></button>
+      <div id="mobile-surveys-menu" class="hidden pl-4 mt-2 space-y-2"><a href="/dcip.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">DCIP</a> <a href="/tem.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">TEM</a> <a href="/seismics.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">Seismics</a> <a href="/gsm.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">GSM</a> <a href="/gravimetrics.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">Gravimetrics</a> <a href="/magnetics.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">Magnetics</a> <a href="/mrs.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">MRS</a> <a href="/methods-techniques.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">Methods &amp; Techniques</a>
+      </div>
+     </div>
+     <div class="py-2"><button id="mobile-software-btn" class="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium"> Geophysics Software 
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+       </svg></button>
+      <div id="mobile-software-menu" class="hidden pl-4 mt-2 space-y-2"><a href="/ip-processing.html" target="_blank" class="block py-2 text-gray-600 hover:text-gray-900">IP Processing</a>
+      </div>
+     </div><a href="/contact.html" target="_blank" class="block py-2 text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="relative h-screen w-full flex items-center justify-center bg-gray-900">
+   <div class="hero-image-container absolute inset-0"><img src="images/about-hero-image.png" alt="About Bargheer Geophysics" onerror="this.style.display='none';">
+   </div>
+   <div class="hero-overlay absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+    <div class="text-center max-w-4xl w-full">
+     <div data-aos="zoom-in" data-aos-duration="1200">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight"><span class="bg-gradient-to-r from-blue-400 to-amber-500 bg-clip-text text-transparent">About Us</span></h1>
+      <p class="text-xl sm:text-2xl md:text-3xl text-white font-light leading-relaxed drop-shadow-lg">Innovation, Excellence &amp; Expertise in Geophysics</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Our Story Section - Arne -->
+  <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 relative overflow-hidden">
+   <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-200 rounded-full filter blur-3xl opacity-20"></div>
+   <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-amber-200 rounded-full filter blur-3xl opacity-20"></div>
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"><!-- Section Title -->
+    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1200">
+     <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-4">Our <span class="bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent">Story</span></h2>
+    </div><!-- Arne's Section -->
+    <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+     <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="100">
+      <div class="relative group">
+       <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-amber-600 rounded-2xl opacity-25 group-hover:opacity-40 blur transition duration-500"></div><img src="images/arne.jpg" alt="Arne Bargheer" class="team-photo relative w-full h-auto rounded-2xl shadow-2xl" onerror="this.style.display='none';">
+      </div>
+     </div>
+     <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <div class="space-y-6">
+       <p class="text-xl text-gray-700 leading-relaxed"><span class="font-bold text-gray-900">Bargheer Geophysics was started by Arne Bargheer in 2015</span> after he had been working 15 years with geophysics within the engineering and consultancy industry in Denmark. Geophysics in Denmark in this period had a huge golden age thanks to a groundwater mapping done by the Danish state resulting in much resources being put into mapping the underground in Denmark, making the Danish underground one of the best investigated in the world and in turn also generating a lot of geophysical innovations.</p>
+       <p class="text-xl text-gray-700 leading-relaxed">Arne has been involved in a big part of the Danish groundwater mapping and is experienced in all the geophysical methods that have been used for this mapping and a broad range of other types of geophysics. Apart from groundwater mapping, Arne has among other things been doing projects involving mineral investigations, oil prospecting, contamination mapping and geotechnical investigations.</p>
+       <p class="text-xl text-gray-700 leading-relaxed">Bargheer Geophysics has since it started been developing new geophysical methods and made improvements of existing technologies.</p>
+      </div>
+     </div>
+    </div><!-- Tarje's Section -->
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+     <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="100" class="order-2 md:order-1">
+      <div class="space-y-6">
+       <p class="text-xl text-gray-700 leading-relaxed"><span class="font-bold text-gray-900">In 2016 Tarje Bargheer joined Bargheer Geophysics,</span> primarily as a programmer working from Spain. Tarje has been within the academia studying mathematics at a very high level for 15 years. He holds a Ph.D. in mathematics and has held several post-doc positions at different universities around the world.</p>
+       <p class="text-xl text-gray-700 leading-relaxed">Tarje is a highly innovative programmer using unique approaches and has developed programs that make Bargheer Geophysics capable of doing work at a quality and speed unrivaled in the industry. A program for automated processing of IP data is among the crown jewels of the programs developed within the domain of Bargheer Geophysics by Tarje.</p>
+      </div>
+     </div>
+     <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200" class="order-1 md:order-2">
+      <div class="relative group">
+       <div class="absolute -inset-2 bg-gradient-to-r from-amber-600 to-blue-600 rounded-2xl opacity-25 group-hover:opacity-40 blur transition duration-500"></div><img src="images/tarje.jpg" alt="Tarje Bargheer" class="team-photo relative w-full h-auto rounded-2xl shadow-2xl" onerror="this.style.display='none';">
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Field Excellence Section -->
+  <section class="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white relative overflow-hidden">
+   <div class="absolute top-0 left-0 w-full h-full opacity-10">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500 rounded-full filter blur-3xl"></div>
+   </div>
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-5xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1200">
+     <h2 class="text-5xl md:text-6xl font-black mb-10 leading-tight">Field <span class="bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">Excellence</span></h2>
+     <div class="space-y-6 text-xl text-gray-300 leading-relaxed mb-12" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+      <p class="text-2xl"><span class="font-bold text-white">Both Arne and Tarje are skilled outdoors specialists</span> with a big range of survival skills.</p>
+      <p>Arne has all his career been doing geophysics in remote places like Greenland and Africa and has a reputation of always collecting the best quality data under even the most extreme conditions. Arne has maybe not always been the first person being sent to acquire a geophysical dataset, but he is always the last person to leave a project site after the data has been collected.</p>
+      <p>Tarje has for some time been living partially off-grid in the Cantabrian mountains in Spain and is a proficient rock climber.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- The Team Section -->
+  <section class="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-5xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1200">
+     <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-10 leading-tight">Our <span class="bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent">Core Team</span></h2>
+     <div class="space-y-6 text-xl text-gray-700 leading-relaxed mb-12" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+      <p>At present the Bargheer brothers make up the core of the company while there are many other skilled people loosely associated with the company. <span class="font-bold text-gray-900">Geologists, geophysicists and field specialists</span> are working for Bargheer Geophysics on a project to project basis, making it possible for the company to deliver geophysics of the highest quality at a very competitive price.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Why Choose Us / Values Section -->
+  <section class="py-24 bg-gradient-to-br from-blue-900 via-slate-900 to-gray-900 text-white relative overflow-hidden">
+   <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-600 rounded-full filter blur-3xl opacity-10"></div>
+   <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-amber-600 rounded-full filter blur-3xl opacity-10"></div>
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1200">
+     <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">Why Choose <span class="bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">Bargheer Geophysics</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-12 mb-16" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200"><!-- Innovation -->
+     <div class="text-center group">
+      <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+       <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+       </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Innovation</h3>
+      <p class="text-gray-300 leading-relaxed">Cutting-edge technology and methods developed in-house for unrivaled data quality</p>
+     </div><!-- Experience -->
+     <div class="text-center group">
+      <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+       <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+       </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Experience</h3>
+      <p class="text-gray-300 leading-relaxed">15+ years of expertise in extreme conditions and remote locations worldwide</p>
+     </div><!-- Quality -->
+     <div class="text-center group">
+      <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-amber-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+       <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+       </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Quality</h3>
+      <p class="text-gray-300 leading-relaxed">Highest quality data collection with competitive pricing and efficient delivery</p>
+     </div>
+    </div><!-- CTA Buttons -->
+    <div data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400" class="flex flex-col sm:flex-row gap-6 justify-center items-center"><a href="/contact.html" target="_blank" class="cta-button group inline-flex items-center bg-gradient-to-r from-amber-600 to-amber-800 hover:from-amber-700 hover:to-amber-900 text-white font-bold px-10 py-5 rounded-full shadow-2xl text-xl transform hover:scale-105 transition-all duration-300"> Get in Touch 
+      <svg class="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg></a> <a href="/index.html#services" class="cta-button group inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold px-10 py-5 rounded-full shadow-2xl text-xl transform hover:scale-105 transition-all duration-300"> View Our Services 
+      <svg class="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg></a>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="bg-gradient-to-b from-gray-900 via-slate-900 to-black text-gray-300 relative overflow-hidden">
+   <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-amber-600 rounded-full filter blur-3xl"></div>
+   </div>
+   <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"><!-- Company Info -->
+     <div class="lg:col-span-1"><img src="images/subsoil-logo.png" alt="Bargheer Geophysics Logo" class="h-14 w-auto mb-5 transform hover:scale-105 transition-transform duration-300" onerror="this.style.display='none';">
+      <h3 class="text-2xl font-black text-white mb-4 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">Bargheer Geophysics</h3>
+      <p class="text-gray-400 leading-relaxed text-base">Professional geophysical surveys worldwide. Specialists in arctic conditions and remote locations.</p>
+     </div><!-- Geophysical Survey Methods -->
+     <div>
+      <h4 class="text-xl font-black text-white mb-6 relative inline-block">Geophysical Surveys <span class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></span></h4>
+      <ul class="space-y-3">
+       <li><a href="/dcip.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> DCIP </a></li>
+       <li><a href="/tem.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> TEM </a></li>
+       <li><a href="/seismics.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Seismics </a></li>
+       <li><a href="/gsm.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> GSM </a></li>
+       <li><a href="/gravimetrics.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Gravimetrics </a></li>
+       <li><a href="/magnetics.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Magnetics </a></li>
+       <li><a href="/mrs.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> MRS </a></li>
+       <li><a href="/methods-techniques.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Methods &amp; Techniques </a></li>
+      </ul>
+     </div><!-- Other Pages -->
+     <div>
+      <h4 class="text-xl font-black text-white mb-6 relative inline-block">Quick Links <span class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></span></h4>
+      <ul class="space-y-3">
+       <li><a href="/index.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Home </a></li>
+       <li><a href="/about.html" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> About Us </a></li>
+       <li><a href="/ip-processing.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> IP Processing </a></li>
+       <li><a href="/contact.html" target="_blank" class="hover:text-amber-400 transition-all duration-300 flex items-center group"> <span class="w-0 group-hover:w-2 h-2 bg-amber-400 rounded-full mr-0 group-hover:mr-2 transition-all duration-300"></span> Contact </a></li>
+      </ul>
+     </div><!-- Contact Details -->
+     <div>
+      <h4 class="text-xl font-black text-white mb-6 relative inline-block">Get in Touch <span class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-600 to-amber-600 rounded-full"></span></h4>
+      <ul class="space-y-4">
+       <li><a href="tel:+4527136222" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span>(+45) 27 13 62 22</span> </a></li>
+       <li><a href="mailto:ab@bgeo.dk" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+         </svg><span>ab@bgeo.dk</span> </a></li>
+       <li><a href="https://www.instagram.com/arne_bargheer?igsh=MW0wcmc2dWZudDhhNQ==" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg><span>Instagram</span> </a></li>
+       <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Klemstrupvej+5,+8550+Ryomgård" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-all duration-300 flex items-start group">
+         <svg class="w-6 h-6 mr-3 mt-0.5 flex-shrink-0 text-blue-400 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg><span>Klemstrupvej 5,<br>
+          8550 Ryomgård</span> </a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8">
+     <div class="text-center">
+      <p class="text-gray-500 text-sm">© 2025 Bargheer Geophysics. All rights reserved.</p>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileSurveysBtn = document.getElementById('mobile-surveys-btn');
+        const mobileSurveysMenu = document.getElementById('mobile-surveys-menu');
+        const mobileSoftwareBtn = document.getElementById('mobile-software-btn');
+        const mobileSoftwareMenu = document.getElementById('mobile-software-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileSurveysBtn.addEventListener('click', () => {
+            mobileSurveysMenu.classList.toggle('hidden');
+        });
+        
+        mobileSoftwareBtn.addEventListener('click', () => {
+            mobileSoftwareMenu.classList.toggle('hidden');
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9afd13e75369b0f0',t:'MTc2NjA0NDMxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
